@@ -1,0 +1,6 @@
+Pillow
+xlrd
+pandas
+openpyxl
+numpy
+google-cloud-vision
