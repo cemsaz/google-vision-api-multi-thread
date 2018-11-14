@@ -45,7 +45,7 @@ def process_request(index, file_name, label_results):
             label_row[labelInd] = label.score
             labelInd += 1
         else:
-        	break
+            break
 
     # Add label data for the image
     label_results[index] = label_row
@@ -81,7 +81,7 @@ for i in range(0, num_files-1, num_threads):
     with open(out_dir + label_out_name, "a") as output:
         writer = csv.writer(output, delimiter=',')
         if i == 0:
-        	writer.writerow(kk for kk in label_columns)
+            writer.writerow(kk for kk in label_columns)
         for res in label_results[i:i+num_threads]:
             writer.writerow(res)
 
