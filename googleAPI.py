@@ -15,6 +15,10 @@ sleep_time = 5 #seconds
 num_threads = 5
 # ---------------------------------
 
+# Create the output directory
+if not os.path.exists(out_dir):
+    os.makedirs(out_dir)
+
 # Instantiates a client
 client = vision.ImageAnnotatorClient()
 
